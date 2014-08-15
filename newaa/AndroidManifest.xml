@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.newaa"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/jiyi"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.newaa.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.newaa.AddDataActivity"
+            android:label="@string/title_activity_add" >
+        </activity>
+        <activity
+            android:name="com.example.newaa.DescribeActivity"
+            android:label="@string/title_activity_dsharp" >
+        </activity>
+        <activity
+            android:name="com.example.newaa.WeActivity"
+            android:label="@string/title_activity_women" >
+        </activity>
+        <activity
+            android:name="com.example.newaa.AddusActivity"
+            android:label="@string/title_activity_addwomen" >
+        </activity>
+    </application>
+
+</manifest>

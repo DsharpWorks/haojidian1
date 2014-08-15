@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">好记点</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="shouye">首页</string>
+    <string name="qita">其他</string>
+    <string name="zhangmu">账目</string>
+    <string name="yijuhua">这是一个记账的程序</string>
+    <string name="firstfragment">这是首页的fragment</string>
+    <string name="sfragment">这是账目的fragment</string>
+    <string name="tfragment">这是其他的fragment</string>
+    <string name="title_activity_add">添加信息</string>
+    <string name="add">添加一个新的信息</string>
+    <string name="baocun">保存</string>
+    <string name="shijian">时间</string>
+    <string name="didian">地点</string>
+    <string name="renwu">人物</string>
+    <string name ="jibenxinxi">基本信息</string>
+    <string name="beizhu">备注</string>
+    <string name="Dsharp">关于D#&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-></string>
+    <string name="women">关于我们&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-></string>
+    <string name="addwomen">加入我们&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-></string>
+    <string name="title_activity_dsharp">Dsharp</string>
+    <string name="dsharpjieshao">Dsharp(D#)通过协作来锤炼代码能力并以此（非 D#）谋生、分享思想并观察世界、锻炼出自己的作品并期待或许的机会、锤炼高效省油的生活工作方式；
+       同时不再“一时冲动”我们，自由、分散、协作、在线 ；D#暂时不接受任何推荐或自荐，虽然这是不现实的存在（荐）。退出成员表示您不认同 D#的价值观或不屑于 D#的存在或者其他，您
+       只需要向社长一封邮件即可脱离 D#.</string>
+     <string name="womenjieshao">我们是Dsharp（你可以理解为屌丝）,我们是一群有着梦想的青年（也许已经不年轻了），我们希望在岁月把我们磨平之前创造一个属于我们的天地。也许我们终究抵不过岁月
+      ，但至少我们在这操蛋的世界里刻下我们独特的无法抹去的我痕迹，这就是我们，这就是Dsharp。</string>
+	 <string name="Email">邮箱：dsharpworkshop@126.com</string>
+	 <string name="wangpan">百度网盘：dsharpworkshop@126.com</string>
+	 <string name="github">代码协作托管平台 github</string>
+     <string name="title_activity_women">关于我们</string>
+     <string name="title_activity_addwomen">加入我们</string>
+
+</resources>
