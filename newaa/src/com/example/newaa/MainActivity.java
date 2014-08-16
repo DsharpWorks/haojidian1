@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	int i=1;
+	
 	
 	
 	protected void exit() {// 退出

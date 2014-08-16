@@ -34,7 +34,6 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 
 		}
 	});
-	int i=1;
 	weButton.setOnClickListener(new View.OnClickListener() {
 
 		@Override
