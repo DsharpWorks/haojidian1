@@ -38,6 +38,10 @@
             android:name="com.example.newaa.AddusActivity"
             android:label="@string/title_activity_addwomen" >
         </activity>
+        <activity
+            android:name="com.example.newaa.Detail"
+            android:label="@string/title_activity_detail" >
+        </activity>
     </application>
 
 </manifest>
