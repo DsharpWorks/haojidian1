@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">好记点</string>
+    <string name="test">测试</string>
     <string name="hello_world">Hello world!</string>
     <string name="shouye">首页</string>
     <string name="qita">其他</string>
