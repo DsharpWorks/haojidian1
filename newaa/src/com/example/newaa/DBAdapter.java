@@ -18,7 +18,7 @@ public static final String KEY_MESSAGE = "message";
 private static final String TAG = "DBAdapter";
 private static final String DATABASE_NAME = "books";
 private static final String DATABASE_TABLE = "titles";
-private static final int DATABASE_VERSION = 1;
+private static final int DATABASE_VERSION = 3;
 private static final String DATABASE_CREATE ="create table titles (_id integer primary key autoincrement, "+ "name text not null, address text not null, "+ "message text not null);";
 private final Context context;
 private DatabaseHelper DBHelper;
@@ -42,9 +42,10 @@ db.execSQL(DATABASE_CREATE);
 @Override
 public void onUpgrade(SQLiteDatabase db, int oldVersion,int newVersion)
 {
-Log.w(TAG, "Upgrading database from version " + oldVersion+ " to "+ newVersion + ", which will destroy all old data");
-db.execSQL("DROP TABLE IF EXISTS titles");
-onCreate(db);
+db.execSQL("DROP TABLE titles;");
+String sqlString="create table titles (_id integer primary key autoincrement, "+ "name text not null, address text not null, "+ "message text not null,data text not null);";
+db.execSQL(sqlString);
+
 }
 }
 
@@ -62,12 +63,13 @@ DBHelper.close();
 }
 
 
-public long insertTitle(String name, String address, String message)
+public long insertTitle(String name, String address, String message,String data)
 {
 ContentValues initialValues = new ContentValues();
 initialValues.put(KEY_NAME, name);
 initialValues.put(KEY_ADDRESS, address);
 initialValues.put(KEY_MESSAGE, message);
+initialValues.put(KEY_DATA, data);
 return db.insert(DATABASE_TABLE, null, initialValues);
 }
 
@@ -80,7 +82,7 @@ return db.delete(DATABASE_TABLE, KEY_ROWID +"=" + rowId, null) > 0;
 
 public Cursor getAllTitles()
 {
-return db.query(DATABASE_TABLE, new String[] {KEY_ROWID,KEY_NAME,KEY_ADDRESS,KEY_MESSAGE},
+return db.query(DATABASE_TABLE, new String[] {KEY_ROWID,KEY_NAME,KEY_ADDRESS,KEY_MESSAGE,KEY_DATA},
 null,
 null,
 null,
@@ -92,7 +94,7 @@ null);
 public Cursor getTitle(long rowId) throws SQLException
 {
 Cursor mCursor =
-db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID,KEY_NAME,KEY_ADDRESS,KEY_MESSAGE},KEY_ROWID + "=" + rowId,
+db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID,KEY_NAME,KEY_ADDRESS,KEY_MESSAGE,KEY_DATA},KEY_ROWID + "=" + rowId,
 null,
 null,
 null,
@@ -105,13 +107,5 @@ return mCursor;
 }
 
 
-public boolean updateTitle(long rowId, String name,String address, String message)
-{
-ContentValues args = new ContentValues();
-args.put(KEY_NAME, name);
-args.put(KEY_ADDRESS, address);
-args.put(KEY_MESSAGE, message);
-return db.update(DATABASE_TABLE, args,
-KEY_ROWID + "=" + rowId, null) > 0;
-}
+
 }

@@ -62,7 +62,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle sav
 							HashMap<String, Object> map = new HashMap<String, Object>();					           
 				        	map.put("ItemName", "姓名: "+c.getString(1));
 				        	map.put("ItemAddress","地址:  " +c.getString(2));
-				        	map.put("ItemMessage", "备注; "+c.getString(3));
+				        	map.put("ItemMessage", "时间:"+c.getString(4));
 				        	listItem.add(map);
 						} while (c.moveToNext());
 						}

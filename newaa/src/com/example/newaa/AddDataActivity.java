@@ -55,6 +55,7 @@ public class AddDataActivity extends Activity {//添加数据的activity
 				 EditText nameEditText=(EditText)findViewById(R.id.renwu_text);
 				 EditText messagEditText=(EditText)findViewById(R.id.beizhu_text);
 				 EditText addressEditText=(EditText)findViewById(R.id.didian_text);
+				 String data;
 				 String name;
 				 String message;
 				 String address;
@@ -63,9 +64,9 @@ public class AddDataActivity extends Activity {//添加数据的activity
 				name=nameEditText.getText().toString();
 				message=messagEditText.getText().toString();
 				address=addressEditText.getText().toString();
-			
+			   data=dataEditText.getText().toString();
 			   db.open();
-			   long id=db.insertTitle(name, address, message);			
+			   long id=db.insertTitle(name, address, message,data);			
 	        	db.close();
 	        	Toast.makeText(AddDataActivity.this,"这是第"+id+"个信息",Toast.LENGTH_SHORT).show();
 			
