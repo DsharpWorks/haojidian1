@@ -16,7 +16,7 @@
 																								
 																		<View  
 											                                      android:layout_height="1px" 
-																		          android:background="@color/gray" 
+																		          android:background="@color/black" 
 																		         android:layout_width="fill_parent">
 																		</View>        																																																
 																		<LinearLayout 
@@ -30,22 +30,23 @@
 																							    android:layout_weight="0.5"
 																							    android:text="@string/shijian" />
 				                                                                           
-																							<EditText
-																							    android:id="@+id/shijian_text"
+																							<TextView
+																							    android:id="@+id/shijian_text"																							
 																							    android:layout_width="0dp"
+																							    android:gravity="center" 
+																							    android:textSize="15sp"
 																							    android:layout_height="fill_parent"
 																							    android:layout_weight="1.5"																			
 																							    android:ems="10" 
-																							    android:inputType="date"
-																							     android:background="@drawable/bg_edittext"		 >			
-																							    <requestFocus />
-																							</EditText>																																                                              																			  
+																							     android:background="@drawable/bg_edittext"	
+																							    	 >																										    
+																							</TextView>																											      																												                                              																			  
 																		</LinearLayout>
 																		
 																		
 																				<View  
 											                                      android:layout_height="1px" 
-																		          android:background="@color/gray" 
+																		          android:background="@color/black" 
 																		         android:layout_width="fill_parent">
 												                               </View>        												
 																		 <LinearLayout 
@@ -72,13 +73,12 @@
 																							    >				
 																							    <requestFocus />
 																							</EditText>																																	        
-																		</LinearLayout>
-																																			 
-																		 	  <View  
+																		</LinearLayout>			
+																		<View  
 											                                      android:layout_height="1px" 
-																		          android:background="@color/gray" 
+																		          android:background="@color/black" 
 																		         android:layout_width="fill_parent">
-												                               </View>  												                               																		 
+												                               </View>  																																 																		 	  												                               																		 
 																				 <LinearLayout 
 																				  android:layout_width="fill_parent"
 																				  android:layout_height="0dp"
@@ -101,12 +101,12 @@
 																							     android:background="@drawable/bg_edittext"		
 																							    > <requestFocus /></EditText>
 																		</LinearLayout>
-																				 
 																				 	<View  
 											                                      android:layout_height="1px" 
 																		          android:background="@color/black" 
 																		         android:layout_width="fill_parent">
 												                               </View>  
+																				 
 																				 <LinearLayout 
 																		  android:layout_width="fill_parent"
 																		  android:layout_height="0dp"
@@ -135,7 +135,7 @@
 																		</LinearLayout>
 																			<View  
 											                                      android:layout_height="1px" 
-																		          android:background="@color/gray" 
+																		          android:background="@color/black" 
 																		         android:layout_width="fill_parent">
 												                               </View>  
 																		  <TextView
