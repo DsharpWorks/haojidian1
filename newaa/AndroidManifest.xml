@@ -39,7 +39,7 @@
             android:label="@string/title_activity_addwomen" >
         </activity>
         <activity
-            android:name="com.example.newaa.Detail"
+            android:name="com.example.newaa.DetailActivity"
             android:label="@string/title_activity_detail" >
         </activity>
     </application>

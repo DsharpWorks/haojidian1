@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -19,9 +20,13 @@ import java.util.Locale;
 
 public class AddDataActivity extends Activity {//添加数据的activity
 	 TextView  dataEditText;
+	 EditText nameEditText;
+	 EditText messagEditText;
+	 EditText addressEditText;
 	 private int year;
-	    private int month;
-	    private int day;
+	 private int month;
+	private int day;
+	private Toast toast;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,9 @@ public class AddDataActivity extends Activity {//添加数据的activity
 		setContentView(R.layout.activity_add);		
 		 Button baocunButton=(Button)findViewById(R.id.baocun);
 		 dataEditText=(TextView)findViewById(R.id.shijian_text);
+		 nameEditText=(EditText)findViewById(R.id.renwu_text);
+		messagEditText=(EditText)findViewById(R.id.beizhu_text);
+		addressEditText=(EditText)findViewById(R.id.didian_text);
 			final DBAdapter db = new DBAdapter(this);
 			
 			//获取当前的日期
@@ -50,30 +58,28 @@ public class AddDataActivity extends Activity {//添加数据的activity
 		 baocunButton.setOnClickListener(new View.OnClickListener() {//保存按钮
 			
 			@Override
-			public void onClick(View v) {
-			
-				 EditText nameEditText=(EditText)findViewById(R.id.renwu_text);
-				 EditText messagEditText=(EditText)findViewById(R.id.beizhu_text);
-				 EditText addressEditText=(EditText)findViewById(R.id.didian_text);
+			public void onClick(View v) {		
 				 String data;
 				 String name;
 				 String message;
 				 String address;
-				// TODO Auto-generated method stub
-				 
-				name=nameEditText.getText().toString();
-				message=messagEditText.getText().toString();
-				address=addressEditText.getText().toString();
-			   data=dataEditText.getText().toString();
-			   db.open();
-			   long id=db.insertTitle(name, address, message,data);			
-	        	db.close();
-	        	Toast.makeText(AddDataActivity.this,"这是第"+id+"个信息",Toast.LENGTH_SHORT).show();
-			
-				Intent intent = new Intent();   
-				intent.setClass(AddDataActivity.this, MainActivity.class);  
-				startActivity(intent); 
-				finish();
+				// TODO Auto-generated method stub				 
+				name=nameEditText.getText().toString().trim();
+				message=messagEditText.getText().toString().trim();
+				address=addressEditText.getText().toString().trim();
+			   data=dataEditText.getText().toString().trim();			   			   
+			   if (name.length()==0) {
+				       toToast("姓名不能为空！！");				
+			  }else{
+			        	db.close();	  
+			        	db.open();
+						long id=db.insertTitle(name, address, message,data);	
+					    toToast("录入成功！");
+						Intent intent = new Intent();   
+						intent.setClass(AddDataActivity.this, MainActivity.class);  
+						startActivity(intent); 
+						finish();		
+			}
 			}
 		});
 	}
@@ -116,4 +122,17 @@ public class AddDataActivity extends Activity {//添加数据的activity
 	            dataEditText.setText(year+"-"+(month+1)+"-"+day);
 	        }
 	    };
+	    
+	    private void toToast(String str){
+	    	
+	    	  if(toast==null)
+				{
+	    		  toast=Toast.makeText(this, str, Toast.LENGTH_SHORT);
+	    		  toast.setGravity(Gravity.CENTER,0,0);	    		  
+				}
+			   else {
+				toast.setText(str);				 
+			}
+	    	  toast.show();
+	    }
 }

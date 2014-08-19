@@ -1,8 +1,173 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.newaa.Detail"
-    tools:ignore="MergeRootFrame" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+						<LinearLayout 
+						android:layout_width="fill_parent"
+						android:layout_height="0dp"
+						android:layout_weight="6"
+						android:orientation="vertical" >
+						<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="0dp"
+						android:text="@string/jibenxinxi"
+						   android:gravity="center" 
+						 android:layout_weight="0.5"></TextView>
+																		
+<View  
+          android:layout_height="1px" 
+          android:background="@color/black" 
+         android:layout_width="fill_parent">
+</View>        																																																
+																				<LinearLayout 
+																				   android:layout_width="fill_parent"
+																				   android:layout_height="0dp"
+																				   android:layout_weight="1" >
+																				<TextView
+																				    android:layout_width="0dp"
+																				    android:gravity="center" 
+																				    android:layout_height="fill_parent"
+																				    android:layout_weight="0.5"
+																				    android:text="@string/shijian" />
+		                                                                          
+																				<TextView
+																				    android:id="@+id/time_show"																							
+																				    android:layout_width="0dp"
+																				    android:gravity="center" 
+																				    android:textSize="15sp"
+																				    android:layout_height="fill_parent"
+																				    android:layout_weight="1.5"																			
+																				    android:ems="10" 
+																				     android:background="@drawable/bg_edittext"	
+																				    	 >																										    
+																				</TextView>																											      																												                                              																			  
+																				</LinearLayout>
+																		
+														
+<View  
+       android:layout_height="1px" 
+        android:background="@color/black" 
+       android:layout_width="fill_parent">
+</View>        												
+																					 <LinearLayout 
+																					  android:layout_width="fill_parent"
+																					  android:layout_height="0dp"
+																					  android:layout_weight="1"
+																					 >
+																					<TextView
+																					    
+																					    android:layout_width="0dp"
+																					    android:gravity="center" 
+																					    android:layout_height="fill_parent"
+																					    android:layout_weight="0.5"
+																					    android:text="@string/renwu" />
+			                                                                            
+																					<TextView
+																					    android:id="@+id/name_show"
+																					    android:singleLine="true"
+																					    android:layout_width="0dp"
+																					    android:gravity="center" 
+																					    android:layout_height="fill_parent"
+																					    android:layout_weight="1.5"																			
+																					    android:ems="10" 
+																					     android:background="@drawable/bg_edittext"		
+																					    >																									    
+																					</TextView>																																	        
+																					</LinearLayout>			
+<View  
+      android:layout_height="1px" 
+       android:background="@color/black" 
+      android:layout_width="fill_parent">
+</View>  																																 																		 	  												                               																		 
+																				 <LinearLayout 
+																				  android:layout_width="fill_parent"
+																				  android:layout_height="0dp"
+																				  android:layout_weight="1"
+																				 >
+																				<TextView
+																			        android:layout_width="0dp"
+																				    android:gravity="center" 
+																				    android:layout_height="fill_parent"
+																				    android:layout_weight="0.5"
+																				    android:text="@string/didian" />
+	                                                                             //ems控制最多显示字符数
+																				<TextView
+																				    android:id="@+id/address_show"
+																				    android:singleLine="true"
+																				    android:layout_width="0dp"
+																				    android:layout_height="fill_parent"
+																				    android:gravity="center" 
+																				    android:layout_weight="1.5"																			
+																				    android:ems="10" 
+																				     android:background="@drawable/bg_edittext"		
+																				    > </TextView>
+																		         </LinearLayout>
+<View  
+     android:layout_height="1px" 
+      android:background="@color/black" 
+     android:layout_width="fill_parent">
+</View>  
+																				 
+																				<LinearLayout 
+																				  android:layout_width="fill_parent"
+																				  android:layout_height="0dp"
+																				  android:layout_weight="2"
+																				 >
+																				<TextView
+																				    
+																				    android:layout_width="0dp"
+																				    android:gravity="center" 
+																				    android:layout_height="fill_parent"
+																				    android:layout_weight="0.5"
+																				    android:text="@string/beizhu" />
+			                                                                         
+																			<TextView																				    
+																				    android:id="@+id/note_show"
+																				    android:layout_width="0dp"
+																				    android:layout_height="fill_parent"
+																				    android:gravity="center" 
+																				    android:layout_weight="1.5"		
+																				    android:background="@drawable/bg_edittext"																	
+																				    android:ems="10" 
+																				    >
+																				</TextView>
+																				</LinearLayout>
+<View  
+ android:layout_height="1px" 
+ android:background="@color/black" 
+android:layout_width="fill_parent">
+ </View>  
+ <TextView
+ android:layout_width="fill_parent"
+ android:layout_height="0dp"
+  android:gravity="center" 
+  android:layout_weight="1"></TextView>
 
+                                                                           </LinearLayout>
+<LinearLayout 
+      android:layout_width="fill_parent"
+    android:layout_height="0dp"
+        android:layout_weight="1" >
+ <Button
+    android:id="@+id/exit_show"
+    android:layout_width="0dp"
+    android:layout_height="fill_parent"
+    android:text="@string/exit" 
+    android:layout_weight="1"
+    android:background="@drawable/bg_alibuybutton"
+    android:gravity="center" 
+    />
+ <Button
+    android:id="@+id/delete_show"
+    android:layout_width="0dp"
+    android:layout_height="fill_parent"
+    android:text="@string/delete" 
+    android:layout_weight="1"
+    android:background="@drawable/bg_alibuybutton"
+    android:gravity="center" 
+    />
+    
+</LinearLayout>
+
+
+</LinearLayout>

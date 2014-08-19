@@ -4,21 +4,17 @@
      android:orientation="vertical"  >
      
 
-				              <Button 
-					      android:layout_width="match_parent"
-					      android:layout_height="wrap_content" 					       
-					      android:id="@+id/addbutton"
-					      android:text="@string/add"
-					      android:gravity="center" 
-					      android:textSize="20sp"
-				              ></Button>
+            <Button 
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" 					       
+     android:id="@+id/addbutton"
+     android:text="@string/add"
+     android:gravity="center" 
+     android:textSize="20sp"
+            ></Button>
    
        
-        <Button
-            android:id="@+id/quanbu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="暂时没做列表，点击用toast显示全部数据" />
+        
         <ListView
              android:layout_width="match_parent"
             android:layout_height="wrap_content"

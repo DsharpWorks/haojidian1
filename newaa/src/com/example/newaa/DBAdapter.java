@@ -91,7 +91,7 @@ null);
 }
 
 
-public Cursor getTitle(long rowId) throws SQLException
+public Cursor getTitle(long rowId) 
 {
 Cursor mCursor =
 db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID,KEY_NAME,KEY_ADDRESS,KEY_MESSAGE,KEY_DATA},KEY_ROWID + "=" + rowId,
