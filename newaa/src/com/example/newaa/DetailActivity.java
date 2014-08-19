@@ -1,6 +1,9 @@
 package com.example.newaa;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -10,9 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailActivity extends Activity {
-
 	
-
+	private DBAdapter db;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail);
@@ -24,7 +26,7 @@ public class DetailActivity extends Activity {
         Button deleteButton=(Button)findViewById(R.id.delete_show);
         Intent intent=this.getIntent();
 		Bundle bundle=intent.getExtras();
-        final DBAdapter db = new DBAdapter(DetailActivity.this);    
+        db = new DBAdapter(DetailActivity.this);    
        final int i= bundle.getInt("v");
        db.open();
        Cursor cursor = db.getTitle(i);
@@ -54,15 +56,35 @@ public class DetailActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			db.open();
-			db.deleteTitle(i);
-			db.close();
-			Intent intent2=new Intent();
-			intent2.setClass(DetailActivity.this, MainActivity.class);
-			startActivity(intent2);
-			finish();	
+			
+			delete(i);
 			}
 	});
 	}
-     
+	protected void delete(final int i) {// 退出
+
+		AlertDialog.Builder d1 = new AlertDialog.Builder(this);
+		d1.setTitle("提示ʾ").setMessage("确定要删除吗")
+				.setPositiveButton("确定", new Dialog.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						db.open();
+						db.deleteTitle(i);
+						db.close();
+						Intent intent2=new Intent();
+						intent2.setClass(DetailActivity.this, MainActivity.class);
+						startActivity(intent2);
+						finish();	
+						
+					}
+				}).setNegativeButton("取消", new Dialog.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+					}
+				}).show();
+	}
 }
