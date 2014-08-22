@@ -8,7 +8,7 @@
     <string name="zhangmu">账目</string>
     <string name="yijuhua">这是一个记账的程序</string>
     <string name="firstfragment">这是首页的fragment</string>
-    <string name="sfragment">这是账目的fragment</string>
+    <string name="sfragment">这个页和首页的内容一样但是实现方式不同，且有不同的功能</string>
     <string name="tfragment">这是其他的fragment</string>
     <string name="title_activity_add">添加信息</string>
     <string name="add">添加一个新的信息</string>
