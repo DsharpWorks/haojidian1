@@ -92,7 +92,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle sav
 								
 								intent.putExtras(bundle);  		
 								startActivity(intent);
-								getActivity().finish();
+								
 							}
 						});
 	return rootView;

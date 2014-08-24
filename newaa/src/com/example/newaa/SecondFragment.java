@@ -45,7 +45,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			bundle.putInt("v", intid);			
 			intent.putExtras(bundle);  		
 			startActivity(intent);
-			getActivity().finish();
+			
 		}
 	});
 	return rootView;
