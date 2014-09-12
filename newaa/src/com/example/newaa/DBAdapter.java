@@ -37,15 +37,19 @@ super(context, DATABASE_NAME, null, DATABASE_VERSION);
 @Override
 public void onCreate(SQLiteDatabase db)
 {
-db.execSQL(DATABASE_CREATE);
+	String sqlString="create table titles (_id integer primary key autoincrement, "+ "name text not null, address text not null, "+ "message text not null,data text not null);";
+	db.execSQL(sqlString);
 }
 @Override
 public void onUpgrade(SQLiteDatabase db, int oldVersion,int newVersion)
 {
-db.execSQL("DROP TABLE titles;");
+	if(oldVersion<3)
+	{
+db.execSQL("DROP TABLE titles;");//删除原表
 String sqlString="create table titles (_id integer primary key autoincrement, "+ "name text not null, address text not null, "+ "message text not null,data text not null);";
-db.execSQL(sqlString);
-
+db.execSQL(sqlString);//建立新表，但是这样会把以前的信息弄丢
+	}
+	
 }
 }
 

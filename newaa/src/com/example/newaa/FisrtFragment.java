@@ -89,7 +89,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle sav
 								intent.setClass(getActivity(), DetailActivity.class);
 								Bundle bundle = new Bundle();  
 								bundle.putInt("v", v);
-								
+								bundle.putInt("u", 1);
 								intent.putExtras(bundle);  		
 								startActivity(intent);
 								

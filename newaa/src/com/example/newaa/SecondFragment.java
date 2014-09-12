@@ -42,7 +42,8 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Intent intent=new Intent();
 			intent.setClass(getActivity(), DetailActivity.class);
 			Bundle bundle = new Bundle();  
-			bundle.putInt("v", intid);			
+			bundle.putInt("v", intid);
+			bundle.putInt("u", 1);
 			intent.putExtras(bundle);  		
 			startActivity(intent);
 			
